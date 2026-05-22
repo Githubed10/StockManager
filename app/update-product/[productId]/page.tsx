@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-const page = ({ params }: { params: Promise<{ productId: string }> }) => {
+const Page = ({ params }: { params: Promise<{ productId: string }> }) => {
   const { user } = useUser();
   const email = user?.primaryEmailAddress?.emailAddress as string;
   const [product, setProduct] = useState<Product | null>(null);
@@ -228,4 +228,4 @@ const page = ({ params }: { params: Promise<{ productId: string }> }) => {
   );
 };
 
-export default page;
+export default  Page;

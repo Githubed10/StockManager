@@ -10,7 +10,7 @@ import ProductImage from "../components/ProductImage";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   
   const { user } = useUser();
   const email = user?.primaryEmailAddress?.emailAddress as string;
@@ -75,7 +75,7 @@ const page = () => {
             await createProduct(
               formData , email
             )
-            toast.success("Article créé avec succès.")
+            toast.success("Article créé avec succe&aposs.")
             router.push("/products")
           }
 
@@ -194,4 +194,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -4,6 +4,7 @@ import Wrapper from "../components/Wrapper";
 import CategoryModal from "../components/CategoryModal";
 import { useUser } from "@clerk/nextjs";
 import {
+  
   createCategory,
   deleteCategory,
   readCategories,
@@ -14,7 +15,7 @@ import { Category } from "@prisma/client";
 import EmptyState from "../components/EmptyState";
 import { Pencil, Trash } from "lucide-react";
 
-const page = () => {
+const Page = () => {
   const { user } = useUser();
   const email = user?.primaryEmailAddress?.emailAddress as string;
 
@@ -153,4 +154,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

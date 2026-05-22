@@ -10,7 +10,7 @@ import ProductImage from '../components/ProductImage';
 import { Trash } from 'lucide-react';
 import { toast } from 'react-toastify';
 
-const page = () => {
+const Page = () => {
 
     const { user } = useUser();
     const email = user?.primaryEmailAddress?.emailAddress as string;
@@ -212,4 +212,4 @@ const handleSubmit = async () => {
   )
 }
 
-export default page
+export default Page
