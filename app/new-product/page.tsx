@@ -142,7 +142,7 @@ const Page = () => {
                 onChange={handleChange}
                 name='unit'
               >
-                <option value=""> Sélectionner l'unité</option>
+                <option value=""> Sélectionner l&apos;unité</option>
                 <option value="g">Gramme</option>
                 <option value="Kg">Kilogramme</option>
                 <option value="L"> Litre </option>
@@ -163,7 +163,7 @@ const Page = () => {
                 />
 
                 <button onClick={handleSubmit} className="btn btn-success">
-                  Créer l'article
+                  Créer l&apos;article
                 </button>
 
               </div>

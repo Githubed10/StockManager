@@ -101,9 +101,9 @@ const Page = ({ params }: { params: Promise<{ productId: string }> }) => {
                           
                  }
         
-    } catch (error : any) {
+    } catch (error : unknown) {
         console.error(error)
-        toast.error(error.message)
+        toast.error(error instanceof Error ? error.message : "Une erreur s'est produite")
         
     }
   }
@@ -114,7 +114,7 @@ const Page = ({ params }: { params: Promise<{ productId: string }> }) => {
         {product ? (
           <div>
             <h1 className="text-2xl font-bold mb-4">
-              Mise à jour de l'article
+              Mise à jour de l&apos;article
             </h1>
             <div className=" flex md:flex-row flex-col md:items-center">
               <form className="space-y-2" onSubmit={handleSubmit}>
